@@ -1,0 +1,10 @@
+Function ExtraerNumeros(Texto As String) As String
+    Dim nmr As String, i As Integer, dgt As String
+    For i = 1 To Len(Texto)
+        dgt = Mid(Texto, i, 1)
+        If (dgt Like "[0-9]") Then
+            nmr = nmr & dgt
+        End If
+    Next i
+    ExtraerNumeros = nmr
+End Function
