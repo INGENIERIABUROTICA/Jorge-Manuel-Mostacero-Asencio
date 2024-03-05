@@ -1,0 +1,10 @@
+Function ExtraerLetras(Texto As String) As String
+    Dim ltr As String, i As Integer, cdg As Integer
+    For i = 1 To Len(Texto)
+        cdg = Asc(Mid(Texto, i, 1))
+        If (cdg >= 65 And cdg <= 90) Or (cdg >= 97 And cdg <= 122) Then
+            ltr = ltr & Chr(cdg)
+        End If
+    Next i
+    ExtraerLetras = ltr
+End Function
