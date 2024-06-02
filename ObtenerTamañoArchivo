@@ -1,0 +1,8 @@
+Function ObtenerTamañoArchivo() As String
+    Dim ruta As String, fso As Object, archivo As Object, tamaño As Double
+    ruta = ThisWorkbook.FullName
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    Set archivo = fso.GetFile(ruta)
+    tamaño = archivo.size / 1024
+    ObtenerTamañoArchivo = Round(tamaño, 2) & " KB"
+End Function
